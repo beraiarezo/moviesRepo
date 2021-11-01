@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState, AppThunk } from 'src/app/store';
-import Requests from '../Requests';
+import { fetchTopRatedMovies } from '../Requests';
 import { ITopRatedMovies, ReadableMovie } from 'src/Types';
 
 export interface MoviesState extends ITopRatedMovies {
@@ -20,7 +20,7 @@ const initialState: MoviesState = {
 export const fetchMovies = createAsyncThunk(
   'movies/fetchTopRated',
   async (page: number) => {
-    const response = await Requests.fetchTopRatedMovies(page);
+    const response = await fetchTopRatedMovies(page);
     return response.data;
   }
 );

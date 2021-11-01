@@ -80,6 +80,7 @@ export const Content: FC = ({children}) => {
     useEffect(() => {
       checkUi()
       dispatch(fetchMovies(1))
+    // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
@@ -98,8 +99,10 @@ export const Content: FC = ({children}) => {
     useEffect(() => {
       function listener() {
         checkUi() 
+        
       }
       window.addEventListener('resize', listener)
+      // eslint-disable-next-line
     }, [])
 
     const checkUi = () => {
