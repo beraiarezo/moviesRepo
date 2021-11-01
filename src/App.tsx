@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-API.setBaseUrl(`${config.conf.baseUrl}`)
+API.setBaseUrl(config.conf.baseUrl)
 
 
 export default App;

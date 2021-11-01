@@ -12,7 +12,7 @@ class ApiClass {
   request<T>(method: Method, endpoint: string, params?: any) : Promise<AxiosResponse<T>> {
     if (!this.axiosInstance) {
       this.axiosInstance = axios.create({
-        baseURL: `${this.baseUrl}`,
+        baseURL: `${this.baseUrl}?`,
       })
     }
     const config : AxiosRequestConfig = {
