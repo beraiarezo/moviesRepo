@@ -11,16 +11,14 @@ class ApiClass {
 
   request<T>(method: Method, endpoint: string, params?: any) : Promise<AxiosResponse<T>> {
     if (!this.axiosInstance) {
-      this.axiosInstance = axios.create({
-        baseURL: `${this.baseUrl}?`,
-      })
+      this.axiosInstance = axios.create()
     }
     const config : AxiosRequestConfig = {
+      baseURL: `${this.baseUrl}?${endpoint}`,
       method: method,
-      url: endpoint,
       headers: {
         'Authorization': 'bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjhiNjBiNTM1NDljMzNiMGRmM2ViZjFkODMxYWQzMSIsInN1YiI6IjYxN2RiMjlmY2JhMzZmMDA0M2U0ZjdhOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jD1picuUfx1dbxDv0OkQG1UqnYqN2k3rfDbjgnBFRZM'
-      },
+      }
     }
     if (method === 'POST') {
       config.data = params
