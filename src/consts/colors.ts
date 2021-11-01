@@ -1,0 +1,9 @@
+export const success = '#22bb33'
+export const danger = '#bb2124'
+export const gray = '#aaaaaa'
+export const white = '#fff'
+export const primaryDark = '#282828'
+export const primary = '#f0ad4e'
+export const black = '#111'
+export const secondary = '#5bc0de'
+export const secondaryWhite = '#f3f3f3';

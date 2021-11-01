@@ -1,0 +1,7 @@
+export { default as logo }  from './icons/logo.svg'
+export { default as iconTop } from './icons/top-rated.png' 
+export { default as iconLike } from './icons/like.png'
+export { default as iconCalendar } from './icons/calendar.png'
+export { default as iconStar } from './icons/star.png'
+export { default as loadingGif } from './icons/loading-gun.gif'
+export { default as iconDownArrow } from './icons/arrow-down.png'
